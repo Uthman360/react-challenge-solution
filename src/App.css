@@ -47,12 +47,13 @@
 
 
 .progress-container {
-  width: 100%;
+  position: relative;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 50%;
   margin: auto;
-  background-color: #e7e5e5;
-  /* Gray background */
-  height: 30px;
-  /* Adjust height as needed */
 }
 
 .progress-bar-header {
@@ -64,48 +65,31 @@
 }
 
 .score-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+  width: 100%;
+  margin: 20px 0;
 }
 
 .score {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
   width: 50%;
+  margin: auto;
 }
 
-.progress-container {
-  position: relative;
-  width: 50%;
-  height: 20px;
-  background-color: #fff;
-  border: 1px solid #000;
-}
 
-.progress-bar,
-.progress-bar-gray,
-.progress-bar-light-gray {
-  position: absolute;
-  height: 100%;
-  transition: width 0.3s ease;
-  /* Add transition for width change */
-}
 
 .progress-bar {
-  background-color: #000;
-  /* Black section */
-}
-
-.progress-bar-gray {
-  background-color: #888;
-  /* Gray section */
+  height: 100%;
+  background-color: black;
+  width: 100%;
+  transition: width 0.5s ease;
 }
 
 .progress-bar-light-gray {
-  background-color: #fff;
-  /* Light gray section */
+  height: 100%;
+  background-color: gray;
+  position: absolute;
 }
 
 

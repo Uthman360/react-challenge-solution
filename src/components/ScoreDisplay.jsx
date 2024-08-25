@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ScoreDisplay = ({ currentScorePercentage, maxScorePercentage, minScorePercentage }) => (
+const ScoreDisplay = ({ currentScorePercentage, maxScorePercentage }) => (
     <div className="score-wrapper">
         <div className="score">
             <div>Score: {Math.round(currentScorePercentage)}%</div>
@@ -10,28 +10,22 @@ const ScoreDisplay = ({ currentScorePercentage, maxScorePercentage, minScorePerc
             <div
                 className="progress-bar"
                 style={{
-                    width: `${minScorePercentage}%`,
+                    width: `${currentScorePercentage}%`,
                     backgroundColor: 'black',
-                }}
-            ></div>
-            <div
-                className="progress-bar-gray"
-                style={{
-                    width: `${currentScorePercentage - minScorePercentage}%`,
-                    left: `${minScorePercentage}%`,
-                    backgroundColor: 'darkgray',
                 }}
             ></div>
             <div
                 className="progress-bar-light-gray"
                 style={{
                     width: `${maxScorePercentage - currentScorePercentage}%`,
-                    left: `${currentScorePercentage}%`,
                     backgroundColor: 'gray',
+                    position: 'absolute',
+                    left: `${currentScorePercentage}%`,
                 }}
             ></div>
         </div>
     </div>
+
 );
 
 export default ScoreDisplay;
