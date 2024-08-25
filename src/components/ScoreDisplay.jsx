@@ -11,28 +11,27 @@ const ScoreDisplay = ({ currentScorePercentage, maxScorePercentage, minScorePerc
                 className="progress-bar"
                 style={{
                     width: `${minScorePercentage}%`,
-                    backgroundColor: 'gray',
+                    backgroundColor: 'black',
                 }}
             ></div>
             <div
                 className="progress-bar-gray"
                 style={{
                     width: `${currentScorePercentage - minScorePercentage}%`,
-                    // left: `${minScorePercentage}%`,
-                    backgroundColor: 'gray',
+                    left: `${minScorePercentage}%`,
+                    backgroundColor: 'darkgray',
                 }}
             ></div>
             <div
                 className="progress-bar-light-gray"
                 style={{
                     width: `${maxScorePercentage - currentScorePercentage}%`,
-                    // left: `${currentScorePercentage}%`,
-                    backgroundColor: 'black',
+                    left: `${currentScorePercentage}%`,
+                    backgroundColor: 'gray',
                 }}
             ></div>
         </div>
     </div>
-
 );
 
 export default ScoreDisplay;
