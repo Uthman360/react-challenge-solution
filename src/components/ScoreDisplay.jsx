@@ -1,5 +1,4 @@
 import React from 'react';
-const decodeString = (str) => decodeURIComponent(str);
 
 const ScoreDisplay = ({ currentScorePercentage, maxScorePercentage, minScorePercentage }) => (
     <div className="score-wrapper">
@@ -12,23 +11,23 @@ const ScoreDisplay = ({ currentScorePercentage, maxScorePercentage, minScorePerc
                 className="progress-bar"
                 style={{
                     width: `${minScorePercentage}%`,
-                    backgroundColor: 'black',
+                    backgroundColor: 'gray',
                 }}
             ></div>
             <div
                 className="progress-bar-gray"
                 style={{
                     width: `${currentScorePercentage - minScorePercentage}%`,
-                    left: `${minScorePercentage}%`,
-                    backgroundColor: 'darkgray',
+                    // left: `${minScorePercentage}%`,
+                    backgroundColor: 'gray',
                 }}
             ></div>
             <div
                 className="progress-bar-light-gray"
                 style={{
                     width: `${maxScorePercentage - currentScorePercentage}%`,
-                    left: `${currentScorePercentage}%`,
-                    backgroundColor: 'gray',
+                    // left: `${currentScorePercentage}%`,
+                    backgroundColor: 'black',
                 }}
             ></div>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-const decodeString = (str) => decodeURIComponent(str);
 
 const DifficultySelector = ({ selectedDifficulty, handleDifficultyChange }) => (
     <div className="difficulty-buttons">
