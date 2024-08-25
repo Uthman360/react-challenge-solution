@@ -48,6 +48,7 @@
 
 .progress-container {
   width: 100%;
+  margin: auto;
   background-color: #e7e5e5;
   /* Gray background */
   height: 30px;
@@ -72,12 +73,12 @@
 .score {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 50%;
 }
 
 .progress-container {
   position: relative;
-  width: 100%;
+  width: 50%;
   height: 20px;
   background-color: #fff;
   border: 1px solid #000;
