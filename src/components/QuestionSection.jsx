@@ -1,36 +1,13 @@
 import React from 'react';
+const decodeString = (str) => decodeURIComponent(str);
 
-const QuestionSection = ({ question, options, onAnswerOptionClick, clickedOption, correctAnswer, currentQuestion, totalQuestions }) => (
+const QuestionSection = ({ currentQuestion, filteredQuizData }) => (
     <div className="question-section">
         <div className="question-count">
-            <span>Question {currentQuestion + 1}</span>/{totalQuestions}
+            <span>Question {currentQuestion + 1}</span>/{filteredQuizData.length}
         </div>
         <div className="question-text">
-            {question}
-        </div>
-        <div className="answer-section">
-            {options.map((option, index) => (
-                <button
-                    key={index}
-                    onClick={() => onAnswerOptionClick(option)}
-                    disabled={!!clickedOption}
-                    style={{
-                        backgroundColor:
-                            option === correctAnswer && clickedOption
-                                ? 'green'
-                                : clickedOption === option
-                                    ? 'red'
-                                    : '',
-                        color: option === correctAnswer && clickedOption
-                            ? '#fff'
-                            : clickedOption === option
-                                ? '#fff'
-                                : '',
-                    }}
-                >
-                    {option}
-                </button>
-            ))}
+            {decodeString(filteredQuizData[currentQuestion].question)}
         </div>
     </div>
 );

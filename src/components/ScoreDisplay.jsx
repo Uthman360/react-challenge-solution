@@ -1,4 +1,5 @@
 import React from 'react';
+const decodeString = (str) => decodeURIComponent(str);
 
 const ScoreDisplay = ({ currentScorePercentage, maxScorePercentage, minScorePercentage }) => (
     <div className="score-wrapper">
@@ -32,6 +33,7 @@ const ScoreDisplay = ({ currentScorePercentage, maxScorePercentage, minScorePerc
             ></div>
         </div>
     </div>
+
 );
 
 export default ScoreDisplay;
